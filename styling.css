@@ -80,6 +80,7 @@
     background: #fff;
 }
 .contactform h2{
+    padding: 10px;
     font-size: 30px;
     color: #333;
     font-weight: 500;
@@ -116,7 +117,7 @@
 .contactform .inputbox input:valid ~ span,
 .contactform .inputbox textarea:focus ~ span,
 .contactform .inputbox textarea:valid ~ span{
-    color: #e91e63;
+    color: black;
     font-size: 12px;
     transform: translateY(-20px);
 }
@@ -145,4 +146,8 @@
     .contactform{
         width: 100%;
     }
+}
+
+.error{
+    border: 2px solid red;
 }
