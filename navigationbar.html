@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="navigation.css">
 </head>
 <body>
+    <header>
     <nav>
         <div class="logo">
             <img class="logoImage" style="width: 70px;" src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg" alt="">
@@ -20,10 +21,38 @@
                 <li><a href="contactus.html">Contact Us</a></li>
             </ul>
     </nav>
-   
-      <div class="content-items">
-        <img src="laptop.jpeg"
+</header>
+
+<div class="slideshow-container">
+    <div class="content-items">
+        <img class="slide-image" src="laptop.jpeg" alt="Slide 1">
     </div>
+    <div class="content-items">
+        <img class="slide-image" src="bk2.jpg" alt="Slide 2">
+    </div>
+    <div class="content-items">
+        <img class="slide-image" src="teamwork.jpg" alt="Slide 3">
+    </div>
+</div>
+      
+<script>
+    // JavaScript code for slideshow
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var slides = document.getElementsByClassName("content-items");
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 1000); // Change slide every 2 seconds (adjust as needed)
+    }
+</script>
 
 
 <!--footer-->

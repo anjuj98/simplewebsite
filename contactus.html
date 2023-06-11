@@ -9,9 +9,24 @@
     <link rel="stylesheet" type="text/css" href="styling.css">
     <link rel="stylesheet" href="navigation.css">
 
+   <style>
+     .error-message {
+            color: #dc3545;
+            display: none;
+            margin-top: 5px;
+            font-size: small;
+        }
+        .error-message.error-message-visible {
+            display: block;
+        }
+   </style>
+
 </head>
+
 <body>
+   
     <section class="contact">
+        
         <div class="content">
             <h2>Contact Us</h2>
             <p>If you have any questions or inquiries, please don't hesitate to contact us using the information below:</p>
@@ -46,19 +61,22 @@
                 <form>
                     <h2>Send Message</h2>
                     <div class="inputbox">
-                        <input type="text" name="" id="name" " >
+                        <input type="text" name="name" id="name" >
                         <span>Full Name</span>
+                        <div class="error-message">Please enter your full name.</div>
                     </div>
                     <div class="inputbox">
-                        <input type="email" name="" id="email" >
+                        <input type="email" name="email" id="email" >
                         <span>Email</span>
+                        <div class="error-message">Please enter a valid email address.</div>
                     </div>
                     <div class="inputbox">
                         <textarea id="message" ></textarea>
                         <span>Type your message...</span>
+                        <div class="error-message">Please enter your message.</div>
                     </div>
                     <div class="inputbox">
-                       <input type="submit" name="" value="Send">
+                       <input type="submit" name="submit" value="Send">
                     </div>
                 </form>
             </div>
@@ -88,9 +106,38 @@
     <div class="footerbottom">
         <p>Copyright &copy;2023 Designed by <span class="designer">vincent</span></p>
     </div>
-    
 </footer>
-  
+
+<script>
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.querySelector('form');
+        var inputs = form.querySelectorAll('input, textarea');
+
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].addEventListener('focus', function() {
+                this.parentElement.querySelector('.error-message').classList.remove('error-message-visible');
+            });
+        }
+
+        form.addEventListener('submit', function(event) {
+            var valid = true;
+
+            for (var i = 0; i < inputs.length; i++) {
+                if (!inputs[i].value) {
+                    inputs[i].parentElement.querySelector('.error-message').classList.add('error-message-visible');
+                    valid = false;
+                }
+            }
+
+            if (!valid) {
+                event.preventDefault();
+            }
+            
+        });
+    });
+</script>
 </body>
 </html>
 
