@@ -12,18 +12,20 @@
     <header>
     <nav>
         <div class="logo">
-            <img class="logoImage" style="width: 70px;" src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg" alt="">
+            <img class="logoImage" style="width: 70px;" src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg" alt="logoimage">
         </div>
             <ul>
                 <li><a href="navigationbar.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="login.html" >Sign Up</a></li>
-                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="login.html" >Sign in</a></li>
+                <li><a href="register.html" >Sign up</a></li>
+
+                <li><a href="contactus.html">Contact us</a></li>
             </ul>
     </nav>
 </header>
 
-<div class="slideshow-container">
+<div class="slideshow-container" >
     <div class="content-items">
         <img class="slide-image" src="teamwork.jpg" alt="Slide 1">
     </div>
@@ -41,24 +43,7 @@
     </div>
 </div>
       
-<script>
-    // JavaScript code for slideshow
-    var slideIndex = 0;
-    showSlides();
 
-    function showSlides() {
-        var slides = document.getElementsByClassName("content-items");
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 2000); // Change slide every 2 seconds (adjust as needed)
-    }
-</script>
 
 
 <!--footer-->
@@ -82,10 +67,11 @@
        
     </div>
     <div class="footerbottom">
-        <p>Copyright &copy;2023 Designed by <span class="designer">vincent</span></p>
+        <p>Copyright &copy;2023 Designed by <span class="designer">Vincent</span></p>
     </div>
     
 </footer>
+<script src="navbar.js"> </script>
 
 </body>
 </html>

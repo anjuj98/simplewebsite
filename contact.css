@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: 'poppins',sans-serif;
 }
+header {
+    position: relative;
+    z-index: 1;
+  }
+  
 .contact{
     position: relative;
     min-height: 100vh;
@@ -19,10 +24,11 @@
 .contact .content{
     max-width: 800px;
     text-align: center;
+   
 
 }
 .contact .content h2{
-    font-size: 36px;
+    font-size: 40px;
     margin: 20px;
     font-weight: 500;
     color: #fff;
@@ -80,10 +86,11 @@
     background: #fff;
 }
 .contactform h2{
-    padding: 10px;
+    padding: 0px;
     font-size: 30px;
     color: #333;
     font-weight: 500;
+   
 
 }
 .contactform .inputbox{
@@ -150,4 +157,13 @@
 
 .error{
     border: 2px solid red;
+}
+.error-message {
+    color: #dc3545;
+    display: none;
+    margin-top: 5px;
+    font-size: 60%;
+}
+.error-message.error-message-visible {
+    display: block;
 }

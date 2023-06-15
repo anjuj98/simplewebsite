@@ -10,6 +10,7 @@ body{
 .heading{
     text-align: center;
     margin-top: 25px;
+    padding-top: 8%;
 }
 .heading h1{
     font-size: 50px;
@@ -41,12 +42,14 @@ body{
     color: #36455c;
     font-size: 24px;
     margin: 15px 0px;
+    text-align:justify;
 }
 .content p{
     color: #666;
     font-size: 18px;
     line-height: 1.5;
     margin: 15px 0px;
+    justify-content: flex-end;
 }
 @media(max-width:768px){
     .about-us{
@@ -61,3 +64,11 @@ body{
     max-width: 100%;
 padding: 15px;    }
 }
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }

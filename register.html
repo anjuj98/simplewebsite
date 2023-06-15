@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet"  type="text/css" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="navigation.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img class="logoImage" style="width: 70px;" src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg" alt="logoimage">
+            </div>
+            <ul>
+                <li><a href="navigationbar.html">Home</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="login.html" >Sign in</a></li>
+                <li><a href="register.html" >Sign up</a></li>
+                <li><a href="contactus.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+    <div class="container">
+        <div class="title">Sign up</div>
+        <form action="#" id="form">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">First name </span>
+                    <input type="text" id="firstName" autocomplete="off" placeholder="Enter your first name" onfocusout="validateFirstName()" >
+                    <div class="error"></div>
+                </div>
+                <div class="input-box" error>
+                    <span class="details">Last name</span>
+                    <input type="text" placeholder="Enter your last name" autocomplete="off" id="lastName" onfocusout="validateLastName()">
+                    <div class="error"></div>
+
+                </div>
+                <div class="input-box">
+                    <span class="details">Date of birth</span>
+                    <input type="date" placeholder="Enter your date of birth " id="dateOfBirth" onfocusout="validateDateOfBirth()" >
+                    <div class="error"></div>
+
+                </div>
+                <div class="input-box">
+                    <span class="details">Age</span>
+                    <input type="text" placeholder="Age" id="age"   readonly required>
+                    <div class="error"></div>
+
+                </div>
+                
+                <div class="input-box">
+                    <span class="details">Phone number</span>
+                    <input type="number" id="phoneNumber"autocomplete="off" placeholder="Enter your phone number " onfocusout="validatePhoneNumber()" >
+                    <div class="error"></div>
+
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" id="email" autocomplete="off" placeholder="Enter your email address " onfocusout="validateEmail()">
+                    <div class="error"></div>
+
+                </div>
+                <div class="input-box">
+                    <span class="details">State</span>
+                    <select id="state"  required>
+                        <option>--select--</option>
+                        <option>Kerala</option>
+                        <option>Tamil Nadu</option>
+                        <option>Haryana</option>
+                        <option>Goa</option>
+                    </select>
+                    <div class="error"></div>
+
+                </div>
+                <div class="input-box">
+                    <span class="details">City</span>
+                    <select id="city" required>
+                        <option>--select--</option>
+
+                    </select>
+                    <div class="error"></div>
+
+                </div>
+                <div class="input-box">
+                    <span class="details">Username</span>
+                    <input type="text" id="username" autocomplete="off" placeholder="Enter your username "  onfocusout="validateUsername()" >
+                    <div class="error"></div>
+
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" id="password" autocomplete="off" placeholder="Enter your password "  onfocusout="validatePassword()" >
+                    <div class="error"></div>
+
+                </div>
+                <div class="input-box">
+                    <span class="details" >Confirm password</span>
+                    <input type="password" id="confirmPassword" autocomplete="off" placeholder="Confirm your password "  onfocusout="validateConfirmPassword()">
+                    <div class="error"></div>
+
+                </div>
+                <div class="input-box">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+
+
+                    <span class="details">Gender</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender" >Male</span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Other</span>
+                        </label>
+                    </div>
+                </div>
+                
+            </div>
+            
+           
+            <div  class="button">
+                <button type="submit" name="submit" >Sign up</button>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footercontainer">
+            <div class="socialicons">
+                <a href=""><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            </div>
+            <div class="footernav">
+                <ul>
+                    <li><a href="navigationbar.html">Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+           
+        </div>
+        <div class="footerbottom">
+            <p>Copyright &copy;2023 Designed by <span class="designer">Vincent</span></p>
+        </div>
+        
+    </footer>
+
+</body>
+<script src="register.js"></script>
+
+</html>
